@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Krishna – A Suprema Personalidade de Deus</title>
+  
+  <!-- Ícones do Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       margin: 0;
@@ -14,12 +18,12 @@
     }
 
     .container {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.88);
       margin: 2rem auto;
       padding: 25px;
       max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
     }
 
     h1 {
@@ -58,12 +62,12 @@
       background-color: white;
       color: #6a5acd;
       cursor: pointer;
-      transition: all 0.3s;
+      transition: all 0.3s ease;
       font-weight: bold;
     }
 
-    nav button:hover, nav button.ativo {
-      event.target.setAttribute("aria-current", "page");
+    nav button:hover,
+    nav button.ativo {
       background-color: #6a5acd;
       color: white;
       box-shadow: 0 0 8px #9370DB;
@@ -71,18 +75,13 @@
 
     section {
       display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
     }
 
     section.ativo {
       display: block;
-    }
-
-    .gallery img {
-      width: 100%;
-      max-width: 250px;
-      margin: 10px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px #aaa;
+      opacity: 1;
     }
 
     .gallery {
@@ -91,11 +90,76 @@
       justify-content: center;
     }
 
-    @media (max-width: 600px) {
-      .container {
-        padding: 15px;
-        margin: 1rem;
-      }
+    .gallery img {
+      width: 100%;
+      max-width: 250px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px #aaa;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: #666;
+      font-style: italic;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #4b0082;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav button {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p.subtitle {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+  }
+}
 
       nav {
         flex-direction: column;
@@ -110,10 +174,10 @@
     <p class="subtitle">"Entregue-se a Mim e Eu o protegerei de toda reação pecaminosa." – Bhagavad Gita 18.66</p>
 
     <nav>
-      <button onclick="mostrarSecao('galeria')" class="ativo">Galeria</button>
-      <button onclick="mostrarSecao('contos')">Contos</button>
-      <button onclick="mostrarSecao('sites')">Sites sobre</button>
-      <button onclick="mostrarSecao('textos')">Textos</button>
+      <button onclick="mostrarSecao('galeria', this)" class="ativo"><i class="fa fa-image"></i> Galeria</button>
+      <button onclick="mostrarSecao('contos', this)"><i class="fa fa-book"></i> Contos</button>
+      <button onclick="mostrarSecao('sites', this)"><i class="fa fa-globe"></i> Sites sobre</button>
+      <button onclick="mostrarSecao('textos', this)"><i class="fa fa-scroll"></i> Textos</button>
     </nav>
 
     <section id="galeria" class="ativo">
@@ -135,7 +199,7 @@
     <section id="sites">
       <h2>Sites sobre Krishna</h2>
       <ul>
-        <li><a href="https://pt.krishna.com/" target="_blank">pt.krishna.com</a> – Site nacional de Krinha</li>
+        <li><a href="https://pt.krishna.com/" target="_blank">pt.krishna.com</a> – Site nacional de Krishna</li>
         <li><a href="https://iskcon.org/" target="_blank">ISKCON</a> – Sociedade Internacional para Consciência de Krishna</li>
         <li><a href="https://www.krishna.com/" target="_blank">Krishna.com</a> – Portal devocional</li>
       </ul>
@@ -143,26 +207,29 @@
 
     <section id="textos">
       <h2>Textos Espirituais</h2>
-      <p>
-        <strong>Bhagavad Gita 18.66:</strong><br />
-        "Abandona todas as variedades de religião e simplesmente Me rende. Eu te libertarei de todas as reações pecaminosas. Não temas."
-      </p>
-      <p>
-        “Krishna é a fonte de tudo. Ele é a causa de todas as causas, o original, eterno e bem-aventurado.” – Śrī Brahma-saṁhitā
-      </p>
+      <p><strong>Bhagavad Gita 18.66:</strong><br />
+        "Abandona todas as variedades de religião e simplesmente Me rende. Eu te libertarei de todas as reações pecaminosas. Não temas."</p>
+      <p>“Krishna é a fonte de tudo. Ele é a causa de todas as causas, o original, eterno e bem-aventurado.” – Śrī Brahma-saṁhitā</p>
     </section>
+
+    <footer>
+      “Hare Krishna Hare Krishna Krishna Krishna Hare Hare, Hare Rama Hare Rama Rama Rama Hare Hare”
+    </footer>
   </div>
 
   <script>
-    function mostrarSecao(id) {
+    function mostrarSecao(id, el) {
       const secoes = document.querySelectorAll("section");
-      secoes.forEach(secao => secao.classList.remove("ativo"));
+      secoes.forEach(secao => {
+        secao.classList.remove("ativo");
+      });
+
+      document.getElementById(id).classList.add("ativo");
 
       const botoes = document.querySelectorAll("nav button");
       botoes.forEach(botao => botao.classList.remove("ativo"));
 
-      document.getElementById(id).classList.add("ativo");
-      event.target.classList.add("ativo");
+      el.classList.add("ativo");
     }
   </script>
 </body>
