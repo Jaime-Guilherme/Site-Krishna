@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krishna – A Suprema Personalidade de Deus</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('krishna-templo-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      margin: 2rem auto;
+      padding: 25px;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.5rem;
+      text-align: center;
+      color: #4b0082;
+      margin-bottom: 0.3rem;
+    }
+
+    h2 {
+      color: #4b0082;
+      border-bottom: 2px solid #9370DB;
+      padding-bottom: 5px;
+    }
+
+    p.subtitle {
+      text-align: center;
+      font-size: 1rem;
+      color: #9370DB;
+      margin-bottom: 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    nav button {
+      margin: 5px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 1px solid #6a5acd;
+      background-color: white;
+      color: #6a5acd;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: bold;
+    }
+
+    nav button:hover, nav button.ativo {
+      event.target.setAttribute("aria-current", "page");
+      background-color: #6a5acd;
+      color: white;
+      box-shadow: 0 0 8px #9370DB;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.ativo {
+      display: block;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 250px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #aaa;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+        margin: 1rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Krishna – A Suprema Personalidade de Deus</h1>
+    <p class="subtitle">"Entregue-se a Mim e Eu o protegerei de toda reação pecaminosa." – Bhagavad Gita 18.66</p>
+
+    <nav>
+      <button onclick="mostrarSecao('galeria')" class="ativo">Galeria</button>
+      <button onclick="mostrarSecao('contos')">Contos</button>
+      <button onclick="mostrarSecao('sites')">Sites sobre</button>
+      <button onclick="mostrarSecao('textos')">Textos</button>
+    </nav>
+
+    <section id="galeria" class="ativo">
+      <h2>Galeria</h2>
+      <div class="gallery">
+        <img src="krishna1.jpg" alt="Krishna tocando flauta" />
+        <img src="krishna2.jpg" alt="Krishna com as gopis" />
+        <img src="krishna3.jpg" alt="Krishna e Radha" />
+      </div>
+    </section>
+
+    <section id="contos">
+      <h2>Contos</h2>
+      <p>
+        Um dos passatempos mais doces de Krishna é o roubo da manteiga. Mesmo sendo o Senhor Supremo, Ele agia como uma criança travessa em Vrindavana. Ele invadia as casas das gopis e roubava manteiga, às vezes distribuindo entre os macacos. Esse passatempo mostra Seu amor por Seus devotos e Sua doçura transcendental.
+      </p>
+    </section>
+
+    <section id="sites">
+      <h2>Sites sobre Krishna</h2>
+      <ul>
+        <li><a href="https://vedabase.io/pt/" target="_blank">Vedabase.io</a> – Biblioteca de textos védicos</li>
+        <li><a href="https://iskcon.org/" target="_blank">ISKCON</a> – Sociedade Internacional para Consciência de Krishna</li>
+        <li><a href="https://www.krishna.com/" target="_blank">Krishna.com</a> – Portal devocional</li>
+      </ul>
+    </section>
+
+    <section id="textos">
+      <h2>Textos Espirituais</h2>
+      <p>
+        <strong>Bhagavad Gita 18.66:</strong><br />
+        "Abandona todas as variedades de religião e simplesmente Me rende. Eu te libertarei de todas as reações pecaminosas. Não temas."
+      </p>
+      <p>
+        “Krishna é a fonte de tudo. Ele é a causa de todas as causas, o original, eterno e bem-aventurado.” – Śrī Brahma-saṁhitā
+      </p>
+    </section>
+  </div>
+
+  <script>
+    function mostrarSecao(id) {
+      const secoes = document.querySelectorAll("section");
+      secoes.forEach(secao => secao.classList.remove("ativo"));
+
+      const botoes = document.querySelectorAll("nav button");
+      botoes.forEach(botao => botao.classList.remove("ativo"));
+
+      document.getElementById(id).classList.add("ativo");
+      event.target.classList.add("ativo");
+    }
+  </script>
+</body>
+</html>

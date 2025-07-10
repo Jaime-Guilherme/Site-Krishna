@@ -1,0 +1,61 @@
+🟣 Prompt Estruturado para o Qwen
+Quero criar um site sobre Krishna – a Suprema Personalidade de Deus, usando apenas HTML, CSS e JavaScript básico.
+
+O design deve seguir um estilo espiritual, com cores suaves, fundo natural, fontes leves e atmosfera serena, promovendo paz, harmonia e espiritualidade.
+
+Especificações visuais:
+Imagem de fundo: url('krishna-templo-bg.jpg') (pode ser uma paisagem indiana, templo ou floresta mística)
+
+background-size: cover, background-position: center, background-attachment: fixed
+
+Sobreposição com fundo translúcido rgba(255, 255, 255, 0.85) para melhorar a leitura
+
+Bordas arredondadas (12px) e sombra suave
+
+Padding interno nas caixas de conteúdo: 25px
+
+Estrutura do Site:
+Título centralizado: “Krishna – A Suprema Personalidade de Deus”
+
+Fonte do título: 'Cinzel', serif ou estilo espiritual semelhante
+
+Cor do título: #4b0082 (índigo)
+
+Subtítulo em tom lavanda suave (#9370DB), fonte menor
+
+Barra de navegação com 4 botões: “Galeria”, “Contos”, “Sites sobre”, “Textos”
+
+Botões com estilo: borda arredondada, cor #6a5acd, fundo branco, hover com leve brilho ou sombra
+
+Funcionalidade JS Básica:
+Usar apenas JavaScript simples para mostrar e ocultar seções
+
+Função chamada mostrarSecao(id)
+
+A seção clicada aparece e as outras somem
+
+Os botões mudam visualmente para indicar qual está ativo
+
+Responsividade:
+Layout adaptado para celulares
+
+Menu colapsável em telas menores (pode ser ocultar com display: none e mostrar com JS simples)
+
+Conteúdo exemplo:
+Galeria com 3 imagens de Krishna
+
+Conto espiritual curto (como o roubo da manteiga ou a dança rasa)
+
+Seção com links para sites confiáveis (ISKCON, Vedabase, etc)
+
+Texto devocional ou verso do Bhagavad Gita (como BG 18.66)
+
+Estrutura esperada:
+Código completo com <!DOCTYPE html><html><head><body>
+
+Estilos CSS embutidos no <head> ou separados (ambos aceitos)
+
+Script simples no final do <body>
+
+Layout funcional e bonito mesmo sem frameworks
+
