@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Krishna – A Suprema Personalidade de Deus</title>
-  
+
   <!-- Ícones do Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -64,6 +64,8 @@
       cursor: pointer;
       transition: all 0.3s ease;
       font-weight: bold;
+      display: flex;
+      align-items: center;
     }
 
     nav button:hover,
@@ -71,6 +73,12 @@
       background-color: #6a5acd;
       color: white;
       box-shadow: 0 0 8px #9370DB;
+    }
+
+    nav button i {
+      margin-right: 8px;
+      vertical-align: middle;
+      display: inline-block;
     }
 
     section {
@@ -119,51 +127,46 @@
       text-decoration: underline;
     }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 15px;
-    margin: 1rem;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav button {
-    width: 90%;
-    font-size: 1rem;
-  }
-
-  .gallery {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .gallery img {
-    max-width: 90%;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  p.subtitle {
-    font-size: 0.95rem;
-  }
-
-  footer {
-    font-size: 0.85rem;
-  }
-}
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+        margin: 1rem;
+      }
 
       nav {
         flex-direction: column;
         align-items: center;
+      }
+
+      nav button {
+        width: 90%;
+        font-size: 1rem;
+        justify-content: center;
+      }
+
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .gallery img {
+        max-width: 90%;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      p.subtitle {
+        font-size: 0.95rem;
+      }
+
+      footer {
+        font-size: 0.85rem;
       }
     }
   </style>
@@ -174,10 +177,10 @@
     <p class="subtitle">"Entregue-se a Mim e Eu o protegerei de toda reação pecaminosa." – Bhagavad Gita 18.66</p>
 
     <nav>
-      <button onclick="mostrarSecao('galeria', this)" class="ativo"><i class="fa fa-image"></i> Galeria</button>
-      <button onclick="mostrarSecao('contos', this)"><i class="fa fa-book"></i> Contos</button>
-      <button onclick="mostrarSecao('sites', this)"><i class="fa fa-globe"></i> Sites sobre</button>
-      <button onclick="mostrarSecao('textos', this)"><i class="fa fa-scroll"></i> Textos</button>
+      <button onclick="mostrarSecao('galeria', this)" class="ativo"><i class="fa fa-image"></i>Galeria</button>
+      <button onclick="mostrarSecao('contos', this)"><i class="fa fa-book"></i>Contos</button>
+      <button onclick="mostrarSecao('sites', this)"><i class="fa fa-globe"></i>Sites sobre</button>
+      <button onclick="mostrarSecao('textos', this)"><i class="fa fa-scroll"></i>Textos</button>
     </nav>
 
     <section id="galeria" class="ativo">
