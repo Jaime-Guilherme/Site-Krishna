@@ -12,7 +12,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('krishna-templo-bg.jpg') no-repeat center center fixed;
+      background: url('krishna-templo.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #333;
     }
@@ -200,40 +200,17 @@
   <div class="container">
     <h1>Krishna – A Suprema Personalidade de Deus</h1>
 
-    <!-- MANTRA -->
-    <section class="mantra-section">
-      <h2>O Mantra Hare Krishna</h2>
-      <p>
-        O mantra <strong>Hare Krishna, Hare Krishna, Krishna Krishna, Hare Hare / Hare Rama, Hare Rama, Rama Rama, Hare Hare</strong> é uma poderosa invocação espiritual que purifica a mente e desperta o amor por Deus. 
-        <br><br>
-        Cantar esse mantra é uma prática do <em>bhakti-yoga</em>, o caminho da devoção, e nos conecta diretamente com Krishna, a Suprema Personalidade de Deus. Ele nos liberta da ilusão material e nos conduz à morada eterna, repleta de bem-aventurança e conhecimento.
-      </p>
-    </section>
-
+ 
     <p class="subtitle">"Entregue-se a Mim e Eu o protegerei de toda reação pecaminosa." – Bhagavad Gita 18.66</p>
 
     <nav>
-      <button onclick="mostrarSecao('galeria', this)" class="ativo"><i class="fa fa-image"></i>Galeria</button>
+      <button onclick="mostrarSecao('galeria', this)"><i class="fa fa-image"></i>Galeria</button>
       <button onclick="mostrarSecao('contos', this)"><i class="fa fa-book"></i>Contos</button>
       <button onclick="mostrarSecao('sites', this)"><i class="fa fa-globe"></i>Sites sobre</button>
       <button onclick="mostrarSecao('textos', this)"><i class="fa fa-scroll"></i>Textos</button>
     </nav>
-
-    <!-- PARAMATMA FIXO -->
-    <section class="texto-paramatma">
-      <h2>Paramātmā – O Senhor no Coração</h2>
-      <p>
-        Paramātmā significa "a Superalma", a forma de Krishna que habita o coração de todos os seres vivos. Ele está presente em nosso interior como testemunha silenciosa, guia e amigo, observando nossas ações e nos dando direção, mesmo quando não percebemos.
-        <br><br>
-        A Superalma está sempre junto de nós, esperando apenas que voltemos nosso coração a Ele. Reconhecer a presença de Paramātmā é um passo importante para desenvolver consciência de Krishna e viver de forma mais sábia e espiritual.
-        <br><br>
-        Como diz o <em>Bhagavad-gītā</em> (15.15):  
-        <em>“Eu estou no coração de todos, e de Mim vêm a lembrança, o conhecimento e o esquecimento.”</em>
-      </p>
-    </section>
-
-    <!-- SEÇÕES COM JS -->
-    <section id="galeria" class="ativo">
+        <!-- SEÇÕES COM JS -->
+    <section id="galeria">
       <h2>Galeria</h2>
       <div class="gallery">
         <img src="KRISHNA1.jpg" alt="Krishna tocando flauta" />
@@ -248,7 +225,26 @@
         Um dos passatempos mais doces de Krishna é o roubo da manteiga. Mesmo sendo o Senhor Supremo, Ele agia como uma criança travessa em Vrindavana. Ele invadia as casas das gopis e roubava manteiga, às vezes distribuindo entre os macacos. Esse passatempo mostra Seu amor por Seus devotos e Sua doçura transcendental.
       </p>
     </section>
-
+   <!-- MANTRA -->
+    <section class="mantra-section">
+         <section class="texto-paramatma">
+      <h2>Paramātmā – O Senhor no Coração</h2>
+      <p>
+        Paramātmā significa "a Superalma", a forma de Krishna que habita o coração de todos os seres vivos. Ele está presente em nosso interior como testemunha silenciosa, guia e amigo, observando nossas ações e nos dando direção, mesmo quando não percebemos.
+        <br><br>
+        A Superalma está sempre junto de nós, esperando apenas que voltemos nosso coração a Ele. Reconhecer a presença de Paramātmā é um passo importante para desenvolver consciência de Krishna e viver de forma mais sábia e espiritual.
+        <br><br>
+        Como diz o <em>Bhagavad-gītā</em> (15.15):  
+        <em>“Eu estou no coração de todos, e de Mim vêm a lembrança, o conhecimento e o esquecimento.”</em>
+      </p>
+    </section>
+      <h2>O Mantra Hare Krishna</h2>
+      <p>
+        O mantra <strong>Hare Krishna, Hare Krishna, Krishna Krishna, Hare Hare / Hare Rama, Hare Rama, Rama Rama, Hare Hare</strong> é uma poderosa invocação espiritual que purifica a mente e desperta o amor por Deus. 
+        <br><br>
+        Cantar esse mantra é uma prática do <em>bhakti-yoga</em>, o caminho da devoção, e nos conecta diretamente com Krishna, a Suprema Personalidade de Deus. Ele nos liberta da ilusão material e nos conduz à morada eterna, repleta de bem-aventurança e conhecimento.
+      </p>
+    </section>
     <section id="sites">
       <h2>Sites sobre Krishna</h2>
       <ul>
@@ -273,9 +269,7 @@
   <script>
     function mostrarSecao(id, el) {
       const secoes = document.querySelectorAll("#galeria, #contos, #sites, #textos");
-      secoes.forEach(secao => {
-        secao.classList.remove("ativo");
-      });
+      secoes.forEach(secao => secao.classList.remove("ativo"));
 
       document.getElementById(id).classList.add("ativo");
 
@@ -284,6 +278,11 @@
 
       el.classList.add("ativo");
     }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const botaoInicial = document.querySelector("nav button");
+      mostrarSecao('galeria', botaoInicial);
+    });
   </script>
 </body>
 </html>
