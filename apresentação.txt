@@ -1,0 +1,27 @@
+📝 Apresentação do Projeto – Site Krishna
+Este site foi desenvolvido como parte da atividade prática de HTML e CSS, com o objetivo de aplicar os conhecimentos adquiridos durante o curso, criando uma página temática sobre Krishna – A Suprema Personalidade de Deus.
+
+Durante o processo de desenvolvimento, optei por utilizar o ChatGPT da OpenAI como assistente de programação, ao invés do assistente Qwen, por sentir maior facilidade na comunicação e na obtenção de respostas claras e práticas. Com isso, pude solucionar dúvidas rapidamente e ajustar o projeto conforme as necessidades.
+
+Além da estrutura HTML e dos estilos com CSS, o projeto incluiu:
+
+Inserção de imagens com cuidado na padronização dos nomes (em maiúsculas);
+
+Um layout personalizado e responsivo, adequado para visualização tanto em computadores quanto em dispositivos móveis;
+
+Navegação por botões dinâmicos usando JavaScript;
+
+Inclusão de ícones com a biblioteca Font Awesome;
+
+Organização do conteúdo em seções temáticas: Galeria, Contos, Sites sobre Krishna e Textos Espirituais;
+
+Utilização da plataforma GitHub para hospedagem dos arquivos e publicação do site via GitHub Pages;
+
+Testes no navegador e no celular para garantir compatibilidade e boa experiência de leitura.
+
+Toda a estrutura do site, desde os arquivos até a publicação, foi feita de forma independente, com auxílio técnico pontual via inteligência artificial.
+
+Link do projeto hospedado no GitHub Pages:
+🔗 https://jaime-guilherme.github.io/Site-Krishna
+
+Agradeço pela oportunidade de colocar em prática o aprendizado, e fico feliz por ter conseguido unir tecnologia e espiritualidade em um trabalho feito com muito carinho e dedicação.
