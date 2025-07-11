@@ -17,6 +17,31 @@
       color: #333;
     }
 
+    .texto-paramatma {
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 850px;
+      border-left: 5px solid #fff;
+      border-radius: 10px;
+      color: #f0f0f0;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .mantra-section {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: center;
+    }
+
     .container {
       background: rgba(255, 255, 255, 0.88);
       margin: 2rem auto;
@@ -174,6 +199,17 @@
 <body>
   <div class="container">
     <h1>Krishna – A Suprema Personalidade de Deus</h1>
+
+    <!-- MANTRA -->
+    <section class="mantra-section">
+      <h2>O Mantra Hare Krishna</h2>
+      <p>
+        O mantra <strong>Hare Krishna, Hare Krishna, Krishna Krishna, Hare Hare / Hare Rama, Hare Rama, Rama Rama, Hare Hare</strong> é uma poderosa invocação espiritual que purifica a mente e desperta o amor por Deus. 
+        <br><br>
+        Cantar esse mantra é uma prática do <em>bhakti-yoga</em>, o caminho da devoção, e nos conecta diretamente com Krishna, a Suprema Personalidade de Deus. Ele nos liberta da ilusão material e nos conduz à morada eterna, repleta de bem-aventurança e conhecimento.
+      </p>
+    </section>
+
     <p class="subtitle">"Entregue-se a Mim e Eu o protegerei de toda reação pecaminosa." – Bhagavad Gita 18.66</p>
 
     <nav>
@@ -183,6 +219,20 @@
       <button onclick="mostrarSecao('textos', this)"><i class="fa fa-scroll"></i>Textos</button>
     </nav>
 
+    <!-- PARAMATMA FIXO -->
+    <section class="texto-paramatma">
+      <h2>Paramātmā – O Senhor no Coração</h2>
+      <p>
+        Paramātmā significa "a Superalma", a forma de Krishna que habita o coração de todos os seres vivos. Ele está presente em nosso interior como testemunha silenciosa, guia e amigo, observando nossas ações e nos dando direção, mesmo quando não percebemos.
+        <br><br>
+        A Superalma está sempre junto de nós, esperando apenas que voltemos nosso coração a Ele. Reconhecer a presença de Paramātmā é um passo importante para desenvolver consciência de Krishna e viver de forma mais sábia e espiritual.
+        <br><br>
+        Como diz o <em>Bhagavad-gītā</em> (15.15):  
+        <em>“Eu estou no coração de todos, e de Mim vêm a lembrança, o conhecimento e o esquecimento.”</em>
+      </p>
+    </section>
+
+    <!-- SEÇÕES COM JS -->
     <section id="galeria" class="ativo">
       <h2>Galeria</h2>
       <div class="gallery">
@@ -222,7 +272,7 @@
 
   <script>
     function mostrarSecao(id, el) {
-      const secoes = document.querySelectorAll("section");
+      const secoes = document.querySelectorAll("#galeria, #contos, #sites, #textos");
       secoes.forEach(secao => {
         secao.classList.remove("ativo");
       });
